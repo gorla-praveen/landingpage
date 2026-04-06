@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+        /* Navbar */
+    .navbar .nav-link {
+      color: white;
+      font-weight: 500;
+    }
+    .navbar .nav-link:hover {
+      color: red;
+    }
+        .contact {
+            text-align: center;
+        }
+        .head {
+            font-size: 50px;
+            display: inline-block;
+            padding: 80px 10px;
+            white-space: nowrap;
+            margin: 0;
+        }
+        .head span {
+            color: #ff3c00;
+        }
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #0f1117;
+            color: white;
+            width: 300px;
+            padding: 40px 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .icon {
+            font-size: 30px;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #aaa;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .highlight {
+            color: red;
+        }
+        .contact-form {
+            background: #0f1117;
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            width: 800px;
+            margin: 40px auto;
+            border-radius: 12px;
+            max-width: 95%;
+        }
+        .form-title {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .form-title span {
+            color: red;
+        }
+        .form-subtitle {
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .input-group label {
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 12px;
+        }
+        .input-group input,
+        .input-group textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #e5e5e5;
+            font-size: 14px;
+        }
+        .full {
+            grid-column: span 2;
+        }
+        .center {
+            text-align: center;
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #cc0000;
+        }
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .full {
+                grid-column: span 1;
+            }
+        }
+          .footer {
+  background: #1c1f26;
+  color: #ccc;
+  padding: 50px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.logo span {
+  color: #e63946; 
+}
+
+iframe {
+  max-width: 900px;
+  margin: auto;
+  display: block;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-col ul li:hover {
+  color: #e63946;
+}
+
+.contact i {
+  color: #e63946;
+}
+
+.footer-bottom {
+  background: #0f1115;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 13px;
+  border-top: 1px solid #2a2d34;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom span {
+  color: #e63946;
+}
+  /* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="travel logo.png" width="45" class="me-2">
+        <h4 class="mb-0 fw-bold text-white">Sara</h4> 
+        <h4 class="mb-0 fw-bold text-danger">Travels</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="DESTINATIONS.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="ourServices.html">Our Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <section class="contact">
+        <div>
+            <h1 class="head">Get In <span>Touch</span></h1>
+            <p>We're here to help you plan your perfect journey. Reach out to us through any of the following channels.
+            </p>
+        </div>
+        <section class="contact-cards">
+            <div class="card">
+                <i class="fa-solid fa-phone icon"></i>
+                <h3>Call Us</h3>
+                <p>Available 24/7 for your travel queries</p>
+                <p class="highlight">+91-123456789</p>
+                <p class="highlight">+91-123456789</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-envelope icon"></i>
+                <h3>Email Us</h3>
+                <p>We'll respond within 24 hours</p>
+                <p class="highlight">contact@saratravels.com</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-location-dot icon"></i>
+                <h3>Visit Us</h3>
+                <p>Hyderabad, Telangana</p>
+                <p>500100</p>
+            </div>
+        </section>
+        <section class="contact-form">
+            <h2 class="form-title">
+                FILL OUT <span>FORM</span>
+            </h2>
+            <p class="form-subtitle">
+                Fill out the form below and we'll get back to you as soon as possible
+            </p>
+            <form class="form-grid">
+                <div class="input-group">
+                    <label>Full Name*</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address*</label>
+                    <input type="email" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="+91 00000 00000">
+                </div>
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text">
+                </div>
+                <div class="input-group full">
+                    <label>Message</label>
+                    <textarea rows="5"></textarea>
+                </div>
+                <div class="full center">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <div class="container my-5 text-center">
+  <h2>OUR <span style="color:red;">LOCATION</span></h2>
+
+  <div class="mt-4">
+    <iframe 
+      src="https://www.google.com/maps?q=Agra,Uttar+Pradesh&output=embed"
+      width="100%" 
+      height="450" 
+      style="border:0; border-radius:10px;"
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+    <footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Logo & About -->
+    <div class="footer-col">
+      <h2 class="logo">SARA<span>TRAVELS</span></h2>
+      <p>Creating premium travel experiences in India and neighboring countries.</p>
+
+      <h4>Legal</h4>
+      <p>Privacy Policy</p>
+
+      
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Destinations</li>
+        <li>Our Services</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <!-- Visa -->
+    <div class="footer-col">
+      <h3>Visa</h3>
+      <ul>
+        <li>India</li>
+        <li>Nepal</li>
+        <li>Bhutan</li>
+        <li>Sri Lanka</li>
+        <li>Maldives</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <ul class="contact">
+        <li><i class="fas fa-map-marker-alt"></i> Hyderabad - 500063</li>
+        <li><i class="fas fa-phone"></i> +91-1234567890</li>
+        <li><i class="fas fa-phone"></i> +91-9876543210</li>
+        <li><i class="fas fa-envelope"></i> contact@saratravels.com</li>
+        <li><i class="fab fa-whatsapp"></i> +91-9876543210</li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+  <p>© 2026 Safari. All rights reserved.</p>
+  <p>Made with ❤️ for travelers worldwide</p>
+</div>
+
+</footer>
+
+</body>
+</html>

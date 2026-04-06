@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+ html {
+  scroll-behavior: smooth;
+}
+.detail-section {
+    display: none; /* hide all sections */
+    padding: 50px;
+    text-align: center;
+    background: #f8f9fa;
+    min-height: 80vh;
+}
+</style>
+</head>
+<body>
+<section id="local" class="detail-section">
+  <h1>Local Expertise</h1>
+  <p>We provide deep knowledge of destinations and local culture.</p>
+    <a href="about.html" class="btn btn-danger">Back</a>
+</section>
+
+<section id="luxury" class="detail-section">
+  <h1>Luxury Experience</h1>
+  <p>Enjoy premium travel with comfort and high-end services.</p>
+      <a href="about.html" class="btn btn-danger">Back</a>
+
+</section>
+
+<section id="personalized" class="detail-section">
+  <h1>Personalized Service</h1>
+  <p>Custom journeys tailored to your needs.</p>
+      <a href="about.html" class="btn btn-danger">Back</a>
+
+</section>
+
+<section id="support" class="detail-section">
+  <h1>24/7 Support</h1>
+  <p>Always available to assist you anytime.</p>
+    <a href="about.html" class="btn btn-danger">Back</a>
+</section>
+
+<section id="safe" class="detail-section">
+  <h1>Safe Travel</h1>
+  <p>Your safety is our top priority.</p>
+    <a href="about.html" class="btn btn-danger">Back</a>
+</section>
+
+<section id="responsible" class="detail-section">
+  <h1>Responsible Tourism</h1>
+  <p>We provide deep knowledge of destinations and local culture.</p>
+    <a href="about.html" class="btn btn-danger">Back</a>
+</section>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash.substring(1); // remove #
+    if (hash) {
+        const section = document.getElementById(hash);
+        if (section) {
+            section.style.display = "block";
+        }
+    }
+});
+</script>
+
+</body>
+</html>
